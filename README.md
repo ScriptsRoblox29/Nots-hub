@@ -16,7 +16,7 @@ button.Position = UDim2.new(0, 100, 0, 100)
 button.Text = "Disabled"
 button.TextColor3 = Color3.new(0, 0, 0)
 button.BackgroundColor3 = Color3.fromRGB(173, 216, 230)
-stroke.BackgroundTransparency = 0.25
+button.BackgroundTransparency = 0.25
 button.Active = true
 button.Draggable = true
 
