@@ -1,4 +1,11 @@
 local Players = game:GetService("Players")
+
+local Id = 74305716507552
+
+if game.PlaceId ~= Id then
+    Players.LocalPlayer:Kick("This game you are in now is not the right game, please enter the right one.")
+else
+local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local LocalPlayer = Players.LocalPlayer
 local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
