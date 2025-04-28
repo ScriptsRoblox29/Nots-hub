@@ -3,8 +3,20 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local LocalPlayer = Players.LocalPlayer
 local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
 
-local running = false
-local attackLoop
+local introGui = Instance.new("ScreenGui", game.CoreGui)
+local label = Instance.new("TextLabel", introGui)
+
+label.Size = UDim2.new(0, 200, 0, 50)
+label.Position = UDim2.new(0.5, -100, 0.5, -25)
+label.BackgroundColor3 = Color3.new(0, 0, 0)
+label.TextColor3 = Color3.new(1, 1, 1)
+label.TextSize = 18
+label.Text = "By: Not's Hub"
+label.BackgroundTransparency = 1
+
+task.wait(3)
+
+introGui:Destroy()
 
 local gui = Instance.new("ScreenGui", game.CoreGui)
 local button = Instance.new("TextButton", gui)
@@ -12,9 +24,9 @@ local stroke = Instance.new("UIStroke", button)
 local uicorner = Instance.new("UICorner", button)
 
 button.Size = UDim2.new(0, 200, 0, 50)
-button.Position = UDim2.new(0, 100, 0, 100)
+button.Position = UDim2.new(0.5, -100, 0.5, -25)
 button.Text = "Disabled"
-button.TextColor3 = Color3.new(0, 0, 0)
+button.TextColor3 = Color3.new(255, 255, 255)
 button.BackgroundColor3 = Color3.fromRGB(173, 216, 230)
 button.BackgroundTransparency = 0.25
 button.Active = true
@@ -26,6 +38,9 @@ stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 stroke.Transparency = 0.25
 
 uicorner.CornerRadius = UDim.new(0, 0.4)
+
+local running = false
+local attackLoop
 
 local function equipTool()
     local backpack = LocalPlayer:FindFirstChildOfClass("Backpack")
