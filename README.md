@@ -6,7 +6,7 @@ local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
 local Id = 74305716507552
 
 if game.PlaceId ~= Id then
-    Players.LocalPlayer:Kick("this game is wrong! the script can't be used if it doesn't have support, Please search Roblox for: 'Troll People Tower' and play the right game.")
+    Players.LocalPlayer:Kick("this game is wrong, the script can't be used. Please search Roblox for; 'Troll People Tower' and play the right game.")
 else
 
     local introGui = Instance.new("ScreenGui", game.CoreGui)
